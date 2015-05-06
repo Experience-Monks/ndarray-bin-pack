@@ -1,0 +1,42 @@
+{
+  "name": "ndarray-bin-pack",
+  "version": "1.0.0",
+  "description": "bin-pack an array of rectangles into an atlas",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "bin-pack": "^1.0.1",
+    "ndarray": "^1.0.16",
+    "ndarray-ops": "^1.2.2"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "standard": "^3.7.3",
+    "tape": "^4.0.0"
+  },
+  "scripts": {
+    "test": "standard && node test.js | faucet"
+  },
+  "keywords": [
+    "bin",
+    "pack",
+    "pixels",
+    "atlas",
+    "tile",
+    "tiling",
+    "tiles"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/ndarray-bin-pack.git"
+  },
+  "homepage": "https://github.com/Jam3/ndarray-bin-pack",
+  "bugs": {
+    "url": "https://github.com/Jam3/ndarray-bin-pack/issues"
+  }
+}
