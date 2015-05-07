@@ -72,8 +72,9 @@ function dtype (type) {
       return Float64Array
     case 'uint8_clamped':
       return Uint8ClampedArray
-    case 'generic':
     case 'buffer':
+      return Buffer
+    case 'generic':
     case 'data':
     case 'dataview':
       return ArrayBuffer

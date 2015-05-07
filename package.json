@@ -16,6 +16,9 @@
   },
   "devDependencies": {
     "faucet": "0.0.1",
+    "ndarray-bitmap-to-rgba": "^1.0.0",
+    "save-pixels": "^2.2.0",
+    "sdf-bitmap-glyphs": "^1.0.1",
     "standard": "^3.7.3",
     "tape": "^4.0.0"
   },

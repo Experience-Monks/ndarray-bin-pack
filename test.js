@@ -18,11 +18,12 @@ test('bin-pack an array of rectangular pixels', function (t) {
   t.throws(pack.bind(null), null, 'does not handle zero-length input')
 
   boxes = [
-    ndarray(new Uint8ClampedArray([0]), [1, 1, 3])
+    ndarray(new Uint8ClampedArray([0]), [1, 1, 3]),
+    ndarray(new Uint8Array([0]), [1, 1, 3])
   ]
   atlas = pack(boxes)
-  t.deepEqual(atlas.array.dtype, 'uint8_clamped', 'matches type')
-  t.deepEqual(atlas.array.shape, [1, 1, 3], 'matches depth')
+  t.deepEqual(atlas.array.dtype, 'uint8_clamped', 'matches first type')
+  t.deepEqual(atlas.array.shape, [2, 1, 3], 'matches depth')
   t.end()
 })
 
