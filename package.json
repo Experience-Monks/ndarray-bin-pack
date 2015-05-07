@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "bin-pack": "^1.0.1",
+    "dtype": "^1.0.0",
     "ndarray": "^1.0.16",
     "ndarray-ops": "^1.2.2"
   },

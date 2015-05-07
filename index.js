@@ -1,6 +1,7 @@
 var ops = require('ndarray-ops')
 var ndarray = require('ndarray')
 var binpack = require('bin-pack')
+var dtype = require('dtype')
 
 module.exports = pack
 function pack (arrays) {
@@ -20,7 +21,7 @@ function pack (arrays) {
   var width = box.width
   var height = box.height
   var depth = arrays[0].shape[2] || 1
-  var Ctor = dtype(arrays[0].dtype)
+  var Ctor = dtype(arrays[0].dtype) || Array
   var atlas = ndarray(new Ctor(width * height * depth), [width, height, depth])
 
   // empty space is left at zero
@@ -44,42 +45,5 @@ function pack (arrays) {
   return {
     array: atlas,
     bins: items
-  }
-}
-
-// maybe replace this with:
-// https://github.com/shama/dtype
-// https://github.com/shama/dtype/issues/1
-function dtype (type) {
-  switch (type) {
-    case 'uint8':
-      return Uint8Array
-    case 'uint16':
-      return Uint16Array
-    case 'uint32':
-      return Uint32Array
-    case 'int8':
-      return Int8Array
-    case 'int16':
-      return Int16Array
-    case 'int32':
-      return Int32Array
-    case 'float':
-    case 'float32':
-      return Float32Array
-    case 'double':
-    case 'float64':
-      return Float64Array
-    case 'uint8_clamped':
-      return Uint8ClampedArray
-    case 'buffer':
-      return Buffer
-    case 'generic':
-    case 'data':
-    case 'dataview':
-      return ArrayBuffer
-    case 'array':
-    default:
-      return Array
   }
 }

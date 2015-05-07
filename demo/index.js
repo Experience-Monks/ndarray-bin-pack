@@ -10,7 +10,7 @@ var path = require('path')
 var file = path.join(__dirname, 'OpenSans-Bold.ttf')
 var buffer = fs.readFileSync(file)
 
-readFont(buffer, { start: 0, end: 256 }, function (err, font) {
+readFont(buffer, { start: 0, end: 128 }, function (err, font) {
   if (err) throw err
 
   var glyphs = Object.keys(font.glyphs).map(function (key) {
@@ -27,7 +27,6 @@ readFont(buffer, { start: 0, end: 256 }, function (err, font) {
 
   var atlas = pack(bins)
   var out = path.join(__dirname, 'font.png')
-
   var rgba = pixmap(atlas.array).transpose(1, 0, 2)
   save(rgba, 'png')
     .pipe(fs.createWriteStream(out))
