@@ -22,6 +22,10 @@ console.log(atlas.array.shape)
 // size of final atlas
 ```
 
+The input array must have a length greater than zero. 
+
+See [demo/index.js](demo/index.js) for an example application.
+
 ## Usage
 
 [![NPM](https://nodei.co/npm/ndarray-bin-pack.png)](https://www.npmjs.com/package/ndarray-bin-pack)
