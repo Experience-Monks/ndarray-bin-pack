@@ -1,6 +1,6 @@
 var save = require('save-pixels')
 var readFont = require('sdf-bitmap-glyphs')
-var pixmap = require('ndarray-bitmap-to-rgba').opaque
+var pixmap = require('ndarray-bitmap-to-rgba').alpha
 var pack = require('../')
 var ndarray = require('ndarray')
 

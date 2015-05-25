@@ -1,7 +1,7 @@
 var ops = require('ndarray-ops')
 var ndarray = require('ndarray')
 var binpack = require('bin-pack')
-var dtype = require('dtype')
+var dtype = require('ndarray-dtype')
 
 module.exports = pack
 function pack (arrays) {
