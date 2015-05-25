@@ -1,6 +1,6 @@
 {
   "name": "ndarray-bin-pack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "bin-pack an array of rectangles into an atlas",
   "main": "index.js",
   "license": "MIT",
