@@ -26,8 +26,7 @@ readFont(buffer, { start: 0, end: 128 }, function (err, font) {
     })
 
   var atlas = pack(bins)
-  var out = path.join(__dirname, 'font.png')
   var rgba = pixmap(atlas.array).transpose(1, 0, 2)
   save(rgba, 'png')
-    .pipe(fs.createWriteStream(out))
+    .pipe(process.stdout)
 })

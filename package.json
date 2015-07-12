@@ -24,7 +24,8 @@
     "tape": "^4.0.0"
   },
   "scripts": {
-    "test": "standard && node test.js | faucet"
+    "test": "standard && node test.js | faucet",
+    "demo": "node demo/index.js > demo/font.png"
   },
   "keywords": [
     "bin",
